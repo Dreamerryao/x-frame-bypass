@@ -1,0 +1,21 @@
+{
+	"name": "x-frame-bypass",
+	"version": "2022.0426",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"permissions": ["declarativeNetRequest","declarativeNetRequestFeedback"]
+}
